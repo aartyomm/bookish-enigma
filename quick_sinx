@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<math.h>
+
+double sin_t1(double x, double n) {
+    double a = x, s = a;
+    for (double i = 3; i <= n; i += 2) {
+        a = a * (-(x * x)) / ((i - 1) * i);
+        s += a;
+    }
+    return s;
+}
+
+int main() {
+    double x, n, a, b;
+    scanf("%lf %lf", &x, &n);
+    a = sin(x);
+    printf("%lf \n", a);
+    b = sin_t1(x, n);
+    printf("%lf \n", b);
+
+    return 0;
+}
